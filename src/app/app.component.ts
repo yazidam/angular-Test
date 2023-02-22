@@ -31,7 +31,7 @@ export class AppComponent {
   openDialog() {
     this.dialog.open(DialogComponent, {
       width: '50%',
-      height: '50%',
+      height: '60%',
     });
   }
   ngOnInit(): void {
