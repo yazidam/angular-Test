@@ -1,0 +1,80 @@
+<h1 mat-dialog-title>Add form</h1>
+<div mat-dialog-content>
+  <form [formGroup]="userForm">
+    <mat-form-field appearance="outline">
+      <mat-label>FirstName</mat-label>
+      <input formControlName="FirstName" matInput placeholder="Placeholder" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>LastName</mat-label>
+      <input formControlName="LastName" matInput placeholder="Placeholder" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input formControlName="Email" matInput placeholder="Placeholder" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>contactNumber</mat-label>
+      <input
+        formControlName="contactNumber"
+        matInput
+        type="number"
+        placeholder="Placeholder"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Age</mat-label>
+      <input
+        type="number"
+        formControlName="Age"
+        matInput
+        placeholder="Placeholder"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>DOB</mat-label>
+      <input formControlName="DOB" matInput [matDatepicker]="picker" />
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>salary</mat-label>
+      <input
+        type="number"
+        formControlName="salary"
+        matInput
+        placeholder="Placeholder"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>address</mat-label>
+      <input formControlName="address" matInput placeholder="Placeholder" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>imageUrl</mat-label>
+      <input formControlName="imageUrl" matInput placeholder="Placeholder" />
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  <button
+    style="margin-left: 8px"
+    (click)="addUser()"
+    mat-raised-button
+    color="primary"
+  >
+    Save
+  </button>
+</div>
